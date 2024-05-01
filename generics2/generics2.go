@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-//func Add(a int, b int) int {
-//	return a + b
-//}
+type Num interface {
+	int | int8 | int16 | float32 | float64
+}
 
-func Add[T int | float64](a T, b T) T {
+func Add[T Num](a T, b T) T {
 	return a + b
 }
 
