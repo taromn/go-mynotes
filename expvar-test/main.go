@@ -5,7 +5,9 @@ import (
 	"net/http"
 )
 
-// declare counts
+// Access expvar
+// curl http://localhost:8080/debug/vars
+
 var counts = expvar.NewInt("request_counts")
 
 func handler(w http.ResponseWriter, r *http.Request) {
